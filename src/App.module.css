@@ -1,0 +1,25 @@
+main {
+    max-width: 70rem;
+    width:100%;
+    margin: auto;
+    padding: 0 1rem;
+    justify-content: center;
+}
+
+.centralize {
+    display:flex;
+    gap: 0.5rem;
+    position: relative;
+    top: -1.7rem;
+}
+
+.container {
+    width: 100%;
+}
+
+
+.taskHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}

@@ -1,0 +1,13 @@
+.empty {
+    padding: 4rem 1.5rem;
+    box-shadow: 0px -2px 0 0 var(--gray-500);
+    border-radius: 8px;
+    text-align: center;
+    display: grid;
+}
+
+.icon {
+    display: flex;
+    justify-self: center;
+    margin-bottom: 1rem;
+}

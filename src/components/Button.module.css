@@ -1,0 +1,11 @@
+button {
+    border: none;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background-color: var(--blue-dark) !important;
+}
+
+button:hover {
+    background-color: var(--blue);
+}
