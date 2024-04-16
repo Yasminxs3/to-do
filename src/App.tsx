@@ -10,8 +10,16 @@ import Button from "./components/Button";
 import Badge from "./components/Badge";
 import Empty from "./components/Empty";
 import Task from "./components/Task";
+import { CirclePlus } from "lucide-react";
 
 function App() {
+  const tasks = [
+    {
+      id: '1',
+      content: "minha tarefa",
+      check: true,
+    }
+  ]
   return (
     <div>
       <Header />
@@ -19,7 +27,7 @@ function App() {
         <div className={styles.container}>
           <div className={classNames(styles.centralize)}>
             <Input />
-            <Button />
+            <Button>Criar <CirclePlus size={15} /></Button>
           </div>
           <div>
             <header className={styles.taskHeader}>
@@ -32,7 +40,11 @@ function App() {
                 <Badge />
               </span>
             </header>
-            <Task />
+            {
+              tasks.map((task) => {
+                return <Task content={task.content} id={task.id} check={task.check} />
+              })
+            }
             <Empty />
           </div>
         </div>
