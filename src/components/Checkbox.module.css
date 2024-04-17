@@ -23,8 +23,9 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--blue-dark);
   margin-right: 10px;
+  min-width: 16px !important;
 }
 
 .checkbox input[type="checkbox"]:checked + label {
@@ -33,7 +34,7 @@
 }
 
 .checkbox:hover input[type="checkbox"] + label::before {
-  border-color: var(--blue-dark);
+  border-color: var(--blue);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
@@ -45,7 +46,8 @@
   background-position-x: center;
   background-size: 14px;
   transition: background-color 0.3s, box-shadow 0.3s;
-  
+  min-width: 16px !important;
+  background-repeat: no-repeat;
 }
 
 .checkbox:hover input[type="checkbox"]:checked + label::before {

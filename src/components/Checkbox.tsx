@@ -1,4 +1,3 @@
-import Card from "./Card";
 import styles from "./Checkbox.module.css";
 
 interface CheckboxProps {

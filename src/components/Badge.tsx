@@ -1,8 +1,12 @@
 import styles from "./Badge.module.css";
 
-function Badge() {
+interface BadgeProps{
+  value: string;
+}
+
+function Badge({ value }: BadgeProps) {
     return (
-      <span className={styles.badge}>0</span>
+      <span className={styles.badge}>{value}</span>
     )
 }
   
