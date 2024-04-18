@@ -20,20 +20,19 @@ function Task({content, id, check, className, onCheckChange, onDelete }: TaskPro
   const cx = classNames.bind(styles);
 
   const handleCheckChange = (event: boolean) => {
-    console.log('event', event)
     setIsChecked(event);
     onCheckChange(id, event);
   };
 
-  const handleDeleteTask = (event: MouseEventHandler<HTMLButtonElement>) => {
-    onDelete(id, event);
+  const handleDeleteTask = () => {
+    onDelete(id);
   };
   
   return (
     <Card className={cx('justify-between', { backlog: !isChecked }, className)}>
       <Checkbox isChecked={isChecked} setIsChecked={handleCheckChange} content={content} id={id}/>
       <div>
-        <Button variant={"only-icon"} onClick={handleDeleteTask}><Trash size={14} /></Button>
+        <Button variant={"only-icon"} onClick={() => handleDeleteTask()}><Trash size={14} /></Button>
       </div>
     </Card>
   )

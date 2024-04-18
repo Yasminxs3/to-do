@@ -39,6 +39,10 @@ function App() {
     );
   };
 
+  const handleDelete = (id: string) => {
+    setTasks(tasks.filter((task) => task.id !== id))
+  }
+
   const concluded = `${tasks.filter((task) => task.check).length} de ${tasks.length}`;
 
   return (
@@ -68,7 +72,7 @@ function App() {
               <div >
                 {
                   tasks.map((task) => {
-                    return <Task content={task.content} id={task.id} check={task.check} className="mb-4" onCheckChange={handleTaskCheckChange}/>
+                    return <Task content={task.content} id={task.id} check={task.check} className="mb-4" onCheckChange={handleTaskCheckChange} onDelete={handleDelete}/>
                   })
                 }
               </div>
