@@ -30,7 +30,7 @@
 body {
   background-color: var(--gray-600);
   color: var(--gray-300);
-  align-items: start;
+  align-items: self-start !important;
   -webkit-font-smoothing: antialised;
 }
 
