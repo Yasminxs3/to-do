@@ -1,5 +1,4 @@
 import styles from "./Button.module.css";
-import { CirclePlus } from "lucide-react";
 import classNames from 'classnames/bind';
 import { ButtonHTMLAttributes } from "react";
 
@@ -12,7 +11,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 function Button({children, className, variant = 'primary', ...props}: ButtonProps) {
   const cx = classNames.bind(styles);
   return (
-    <button className={cx('button', variant )} {...props}>
+    <button className={cx('button', variant, className )} {...props}>
       {children}
     </button>
   );

@@ -1,4 +1,4 @@
-import { MouseEventHandler, useState } from "react";
+import { useState } from "react";
 import Card from "./Card";
 import Checkbox from "./Checkbox";
 import styles from "./Task.module.css";
